@@ -5,17 +5,6 @@ import numpy as np
 
 # Function to calculate model accuracy
 def calculate_model_accuracy(model, x_test, y_test):
-    """
-    Calculate the model's accuracy on a test dataset.
-
-    Parameters:
-    - model: The loaded model (Keras model object)
-    - x_test: Test images (numpy array)
-    - y_test: Test labels (numpy array)
-
-    Returns:
-    - accuracy: Model accuracy as a percentage
-    """
     loss, accuracy = model.evaluate(x_test, y_test, verbose=0)
     return accuracy * 100
 
